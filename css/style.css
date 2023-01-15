@@ -4,7 +4,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
     color: black;
 }
 
@@ -12,8 +12,9 @@ body{
     color: white;
     background-image:
     url(../img/elric-pxl-wQBQ7Gb9pzc-unsplash.jpg);
-    width: fit-content;
-}
+    min-width: (760px, 100%);
+   }
+
 
 footer .logos{
   margin-left: 5rem;
@@ -43,7 +44,6 @@ footer .logos{
 
 header{
     background: rgb(255, 255, 255, 0.7);
-    height: fit-content;
 }
 
 header nav{
@@ -58,7 +58,7 @@ header nav{
 }
 
 nav h1{
-  width: 5rem;
+  width: max(5rem, 20%);
   color: black;
   font-size: 2rem;
   font-weight: bolder;
@@ -75,7 +75,7 @@ nav .nav-bar a{
     text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
-    margin-right: 5rem;
+    padding-right: 5rem;
     align-items: flex-end;
     font-weight: bold;
 }
@@ -109,7 +109,7 @@ nav input{
 
 .about-wrap .leftq{
   position: absolute;
-  width: 75rem;
+  width: fit-content;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   margin-top: 12rem;
@@ -135,7 +135,6 @@ nav input{
 
 
 .about-wrap .rightq{
-  width: 80rem;
   height: 30rem;
   border-bottom: 1px solid white;
   display: flex;
@@ -177,12 +176,15 @@ section .recent-stuff{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .container{
     display: flex;
     overflow-x: scroll;
+    align-items: center;
     justify-items: center;
+    height: 30rem;
     scroll-snap-type:x mandatory;
     scroll-padding: 5rem;
     border-top: 1px solid white;
@@ -204,10 +206,10 @@ section .recent-stuff{
 }
 
 .container img{
-  width: 70rem;
-  height: 25rem;
-  object-fit: cover;
-  margin-left: 3rem;
+  margin-left: auto;
+  width: 40rem;
+  height: 30rem;
+  object-fit: contain;
 
 }
 
@@ -244,8 +246,8 @@ section .art-board{
 }
 
 section img{
-  width: 45rem;
   height: 200px;
+  width: 35rem;
   object-fit: cover;
   outline: none;
   padding: 0px;
@@ -320,3 +322,47 @@ section#contac .find-me button{
 section#contac .find-me button:hover{
   opacity: 0.5;
 }
+
+
+
+@media (max-width: 760px){
+
+  header nav h1{
+    display: none;
+  }
+  .about-wrap .leftq h6{
+    font-size: 100px;
+  }
+
+  header nav{
+    background-color: rgb(255, 255, 255, 0.5);
+  }
+
+  header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-wrap{
+    width: 100%;
+  }
+
+  .about-wrap .rightq img{
+    width: 35rem;
+  }
+
+
+}
+
+@media (max-width: 1289px) and (min-width: 760px){
+  header, footer{
+    width: 100%;
+  }
+
+
+} 
+
+/* @media (min-width:1290px){
+ 
+} */
