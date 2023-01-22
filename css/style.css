@@ -202,14 +202,21 @@ section .recent-stuff{
 .container .candy {
   flex: 0 0 100%;
   scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
 
+.container .candy2, .candy3{
+  margin-left: 2rem;
+}
+
 .container img{
-  margin-left: auto;
+  gap: 2rem;
   width: 40rem;
   height: 30rem;
-  object-fit: contain;
+  object-fit: cover;
 
 }
 
@@ -363,6 +370,68 @@ section#contac .find-me button:hover{
 
 } 
 
-/* @media (min-width:1290px){
+
+
+@media (max-width:510px){
+
+  footer .logos a{
+    margin-left: 1.5rem;
+  }
+
+  #icon p{
+    display: none;
+  }
+
+  nav .nav-bar a{
+    padding-right: 2rem;
+  }
+
+
+  .about-wrap .leftq h6{
+    font-size: 65px;
+  }
+
+  header nav{
+    background-color: rgb(255, 255, 255, 0.5);
+  }
+
+  header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-wrap{
+    width: 100%;
+  }
+
+  .about-wrap .rightq img{
+    width: 25rem;
+  }
+
+  .container{
+    width: 25rem;
+  }
+
+  .container .candy{
+    gap: 2rem;
+    width: 25rem;
+    object-fit: contain;
+  
+  }
+  .container img{
+    width: 25rem;
+  }
+
+  section img{
+    width: 25rem;
+    object-fit: cover;
+  }
+
+  section#contac .find-me input{
+    padding-right: 10rem;
+  }
+
+
  
-} */
+}
